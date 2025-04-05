@@ -7,17 +7,25 @@ import Form from './Form';
 class App extends React.Component {
     state = {
         usersList: [],
-    }
+    };
+
+    handleAddUser = (user) => {
+        this.setState((prevState) => ({
+            usersList: [...prevState.usersList, user],
+        }));
+    };
+
+
 
     render() {
         const  { usersList } = this.state;
 
         return (
             <section>
-                <Form />
+                <Form onAddUser={this.handleAddUser} />
                 <List items={ usersList } />
             </section>
-        )
+        ) 
     }
 }
 
