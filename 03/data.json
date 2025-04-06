@@ -16,5 +16,11 @@
         "name": "Klawiatura komputerowa",
         "price": 149
 
+    },
+    {
+        "id": 4,
+        "name": "Monitor",
+        "price": 300
+
     }
 ]
