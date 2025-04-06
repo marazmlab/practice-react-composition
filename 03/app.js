@@ -31,12 +31,11 @@ class App extends React.Component {
     render() {
         const { products, cart } = this.state;
 
-        // Definicja stylów inline
         const styles = {
             container: {
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'stretch', // Ustawienie równych wysokości sekcji
+                alignItems: 'stretch',
                 padding: '20px',
                 fontFamily: 'Arial, sans-serif',
             },
@@ -47,7 +46,7 @@ class App extends React.Component {
                 padding: '10px',
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                 display: 'flex',
-                flexDirection: 'column', // Umożliwia poprawne rozmieszczenie zawartości
+                flexDirection: 'column',
             },
             header: {
                 textAlign: 'center',
@@ -59,13 +58,10 @@ class App extends React.Component {
 
         return (
             <div style={styles.container}>
-                {/* Stylizujemy sekcję kategorii */}
                 <div style={styles.section}>
                     <h2 style={styles.header}>Kategoria</h2>
                     <Category products={products} onAddToCart={this.handleAddToCart} />
                 </div>
-
-                {/* Stylizujemy sekcję koszyka */}
                 <div style={styles.section}>
                     <h2 style={styles.header}>Koszyk</h2>
                     <Cart cart={cart} onRemoveFromCart={this.handleRemoveFromCart} />
